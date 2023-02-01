@@ -16,11 +16,11 @@ This module creates an AWS ACM certificate, using DNS to validate domain ownersh
 module "get_certificate" {
   source = "git@github.com:robinvenables/terraform-aws-dns-validated-certificate"
 
-  dns_domain_name         = "robinvenables.com"
-  certificate_domain_name = "robinvenables.com"
-  certificate_san         = ["www.robinvenables.com"]
+  dns_domain_name         = "example.com"
+  certificate_domain_name = "example.com"
+  certificate_san         = ["www.example.com"]
   certificate_tags = {
-    Name    = "venables-website-certificate"
+    Name    = "example-website-certificate"
   }
 
   is_cloudfront_certificate = true
