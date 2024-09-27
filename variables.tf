@@ -15,8 +15,8 @@ variable "certificate_san" {
 
 variable "certificate_tags" {
   description = "Tags to apply to this certificate"
-  type        = map
-  default     = {
+  type        = map(any)
+  default = {
     "Created By" = "Terraform"
   }
 }
